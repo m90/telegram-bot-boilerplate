@@ -1,0 +1,13 @@
+{
+	"message": {
+		"chat": {
+			"id": "foobar"
+		},
+		"text": "Hello Bot!",
+		"from": {
+			"id": "barfoo",
+			"first_name": "Henry David",
+			"last_name": "Thoreau"
+		}
+	}
+}
