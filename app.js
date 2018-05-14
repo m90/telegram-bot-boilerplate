@@ -1,5 +1,4 @@
 var express = require('express');
-var path = require('path');
 var logger = require('morgan');
 var randomstring = require('randomstring');
 var bodyParser = require('body-parser');
@@ -26,14 +25,14 @@ app.use('/' + webhookToken, message);
 app.use('/', index);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next){
+app.use((req, res, next) => {
 	var err = new Error('Not Found');
 	err.status = 404;
 	next(err);
 });
 
 // error handlers
-app.use(function(err, req, res, next){
+app.use((err, req, res, next) => {
 	res.status(err.status || 500);
 	res.json({
 		message: err.message,
